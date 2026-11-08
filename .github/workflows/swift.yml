@@ -1,0 +1,11 @@
+name: Swift Package CI
+on:
+  push:
+  pull_request:
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test package
+        run: swift test
